@@ -42,6 +42,7 @@ const SecondPage = () => (
           <li>Hold down [RIGHT] key to veer right</li>
           <li>Hold down [LEFT] and [RIGHT] keys to speed up</li>
           <li>Do nothing to slow down</li>
+          <li>Sorry, no touch screen support atm :(</li>
         </ul>
       </div>
     </div>
