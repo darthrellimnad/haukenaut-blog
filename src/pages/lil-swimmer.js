@@ -1,16 +1,19 @@
 import React from "react"
 import { Link } from "gatsby"
-import HaukenautDogImage from "../components/HaukenautDogImage"
+import LilSwimmer from "../components/LilSwimmer"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
+const SecondPage = () => (
   <Layout>
-    <SEO title="Haukenaut Blog Home" />
+    <SEO title="Lil Swimmer" />
+    <h1>LilSwimmer</h1>
+    <Link to="/">Go back to the homepage</Link>
     <div
       style={{
         display: "grid",
-        gridTemplateColumns: "256px auto",
+        gridTemplateColumns: "640px auto",
         gridTemplateRows: "auto",
         gridColumnGap: "1rem",
         marginBottom: "1rem",
@@ -24,7 +27,7 @@ const IndexPage = () => (
           gridRowEnd: 2,
         }}
       >
-        <HaukenautDogImage />
+        <LilSwimmer />
       </div>
       <div
         style={{
@@ -34,25 +37,15 @@ const IndexPage = () => (
           gridRowEnd: 2,
         }}
       >
-        <h1>Thoughts and Doodles from a JavaScript Developer</h1>
-        <pre>... it's a work in progress :)</pre>
+        <ul>
+          <li>Hold down [LEFT] key to veer left</li>
+          <li>Hold down [RIGHT] key to veer right</li>
+          <li>Hold down [LEFT] and [RIGHT] keys to speed up</li>
+          <li>Do nothing to slow down</li>
+        </ul>
       </div>
     </div>
-    <h2>Blog Posts</h2>
-    <ul>
-      <li>
-        <Link to="/blog/2019-06-20-lil-swimmer/">
-          2019-06-20: Revisiting an old Doodle
-        </Link>
-      </li>
-    </ul>
-    <h2>Code Doodles</h2>
-    <ul>
-      <li>
-        <Link to="/lil-swimmer/">Play "Lil Swimmer"</Link>
-      </li>
-    </ul>
   </Layout>
 )
 
-export default IndexPage
+export default SecondPage
