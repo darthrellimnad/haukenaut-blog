@@ -49,7 +49,7 @@ const IndexPage = () => (
     <h2>Code Doodles</h2>
     <ul>
       <li>
-        <Link to="/lil-swimmer/">Play "Lil Swimmer"</Link>
+        <Link to="/lil-swimmer/">&#9658; Play "Lil Swimmer"</Link>
       </li>
     </ul>
   </Layout>
