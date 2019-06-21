@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Haukenaut Blog Home" />
+    <SEO title="Home" />
     <div
       style={{
         display: "grid",
