@@ -41,6 +41,7 @@ const IndexPage = () => (
     <h2>Blog Posts</h2>
     <ul>
       <li>
+        {/* TODO: generate blog links using gatsby gql data (`allSitePage`?) */}
         <Link to="/blog/2019-06-20-lil-swimmer/">
           2019-06-20: Revisiting an old Doodle
         </Link>
