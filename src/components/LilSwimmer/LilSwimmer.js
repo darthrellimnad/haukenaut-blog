@@ -9,25 +9,25 @@ import ObstacleLayer from "./ObstacleLayer"
 import * as Consts from "./consts"
 
 const getKeyDownCallback = player => event => {
-  const { keyCode } = event
-  switch (keyCode) {
-    case 37: {
-      // "LEFT"
+  const { code } = event
+  switch (code) {
+    case "KeyA":
+    case "ArrowLeft": {
       player.leftDown = true
       return
     }
-    case 39: {
-      // "RIGHT"
+    case "KeyD":
+    case "ArrowRight": {
       player.rightDown = true
       return
     }
-    case 90: {
-      // Z (test key)
+    case "KeyZ": {
+      // (test key)
       player.onZDown()
       return
     }
-    case 88: {
-      // X (testKey)
+    case "KeyX": {
+      // (testKey)
       player.onXDown()
       return
     }
@@ -38,15 +38,15 @@ const getKeyDownCallback = player => event => {
 }
 
 const getKeyUpCallback = player => event => {
-  const { keyCode } = event
-  switch (keyCode) {
-    case 37: {
-      // LEFT
+  const { code } = event
+  switch (code) {
+    case "KeyA":
+    case "ArrowLeft": {
       player.leftDown = false
       return
     }
-    case 39: {
-      // RIGHT
+    case "KeyD":
+    case "ArrowRight": {
       player.rightDown = false
       return
     }
@@ -98,7 +98,7 @@ const LilSwimmer = () => {
   })
 
   return (
-    <div style={{ width: "100%", position: "relative" }}>
+    <div style={{ width: "100%", height: "480px", position: "relative" }}>
       <canvas ref={canvasRef} width="640" height="480"></canvas>
     </div>
   )

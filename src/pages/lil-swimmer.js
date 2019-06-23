@@ -1,46 +1,23 @@
 import React from "react"
 import { Link } from "gatsby"
 import LilSwimmer from "../components/LilSwimmer"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import $s from "./lil-swimmer.module.css"
 
 const SecondPage = () => (
   <Layout>
     <SEO title="Lil Swimmer" />
     <h1>LilSwimmer</h1>
-    <Link to="/">Go back to the homepage</Link>
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "640px auto",
-        gridTemplateRows: "auto",
-        gridColumnGap: "1rem",
-        marginBottom: "1rem",
-      }}
-    >
-      <div
-        style={{
-          gridColumnStart: 1,
-          gridColumnEnd: 2,
-          gridRowStart: 1,
-          gridRowEnd: 2,
-        }}
-      >
+    <div className={$s.gameGrid}>
+      <div className={$s.game}>
         <LilSwimmer />
       </div>
-      <div
-        style={{
-          gridColumnStart: 2,
-          gridColumnEnd: 3,
-          gridRowStart: 1,
-          gridRowEnd: 2,
-        }}
-      >
+      <div className={$s.controls}>
         <ul>
-          <li>Hold down [LEFT] key to veer left</li>
-          <li>Hold down [RIGHT] key to veer right</li>
-          <li>Hold down [LEFT] and [RIGHT] keys to speed up</li>
+          <li>Hold down [LEFT] or [A] key to veer left</li>
+          <li>Hold down [RIGHT] or [D] key to veer right</li>
+          <li>Hold down [LEFT/A] and [RIGHT/D] keys to speed up</li>
           <li>Do nothing to slow down</li>
           <li>Sorry, touch screen not support atm :(</li>
         </ul>
@@ -56,6 +33,7 @@ const SecondPage = () => (
           </Link>
         </li>
       </ul>
+      <Link to="/">Go back to the homepage</Link>
     </div>
   </Layout>
 )
