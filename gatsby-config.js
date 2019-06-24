@@ -4,6 +4,7 @@ module.exports = {
     title: `Haukenaut Blog`,
     description: `Thoughts and Doodles from a JavaScript Developer.`,
     author: `@gatsbyjs`,
+    siteUrl: `https://darthrellimnad.github.io/haukenaut-blog`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -51,6 +52,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-sitemap`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
