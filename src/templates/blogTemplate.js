@@ -2,12 +2,20 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { DiscussionEmbed } from "disqus-react"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
+  ...props
 }) {
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
+  const { path, title } = frontmatter
+  const disqusConfig = {
+    shortname: process.env.GATSBY_DISQUS_NAME,
+    config: { identifier: path, title },
+  }
+  console.log(data, props)
   return (
     <Layout>
       <SEO title={frontmatter.title} />
@@ -21,6 +29,7 @@ export default function Template({
           />
         </div>
       </div>
+      <DiscussionEmbed {...disqusConfig} />
     </Layout>
   )
 }
